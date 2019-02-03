@@ -12,4 +12,15 @@ func TestMap(t *testing.T) {
 	mapStr["key2"] = "value2"// map[key2:value2]
 	// 删除map key2键
 	delete(mapStr, "key2")// map[]
+
+	mapStr["key3"] = "value3"// map[key2:value2]
+	value, ok := mapStr["key3"]
+	// value , ok := mapStr[key3]
+	// value = value3, ok = true
+	if (!ok) {
+		t.Errorf("value , ok := mapStr[key3]\nvalue = %v, ok = %v", value, ok)
+	}
+
+	// value , ok := mapStr["not exist key"]
+	// value = , ok = false
 }
