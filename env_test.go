@@ -42,3 +42,4 @@ func TestMultiSet(t *testing.T) {
 		t.Error("get key2 value error")
 	}
 }
+
